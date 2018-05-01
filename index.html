@@ -1,45 +1,41 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="de">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Studiumplaner">
-        <meta name="keywords" content="StudyPath,HSLU,Modul">
+        <meta name="description" content="Studiumsplaner">
+        <meta name="keywords" content="StudyPath,HSLU,Modul,Moduleinschreibung">
         <meta name="author" content="Sascha Sägesser">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>StudyPath</title>
-        <!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+
         <script src="jquery-3.1.1.js"></script>
         <script src="js/script.js"></script>
+
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
     <body>
         <header>
-            <h1><a href="#" class="nav" onclick="loadDoc('uebersicht')">StudyPath</a></h1>
+            <div class="nav" id="topnav">
+                <h1><a href="#uebersicht" id="logo" onclick="loadDoc('uebersicht')">StudyPath</a></h1>
 
-            <nav>
-                <ul>
-                    <li><a href="#" class="nav" onclick="loadDoc('uebersicht')">Übersicht</a></li>
-                    <li><a href="#" class="nav" onclick="loadDoc('path')">Path</a></li>
-                    <li><a href="#" class="nav" onclick="loadDoc('majors')">Majors</a></li>
-                    <li><a href="#" class="nav" onclick="loadDoc('einschreibung')">Einschreibung</a></li>
-                </ul>
-            </nav>
+                <a href="#uebersicht" onclick="loadDoc('uebersicht')" onclick="loadDoc('uebersicht')" class="navBtn active">Übersicht</a>
+                <a href="#path" onclick="loadDoc('path')" class="navBtn">Path</a>
+                <a href="#majors" onclick="loadDoc('majors')" class="navBtn">Majors</a>
+                <a href="#einschreibung" onclick="loadDoc('einschreibung')" class="navBtn">Einschreibung</a>
+                <a href="javascript:void(0);" style="font-size:15px" class="icon" onclick="dropdownNav()">&#9776;</a>
 
-            <div id="profil">
-                <a href="/profil/">Profil</a><!--TODO Durch Zeichen ersetzen?-->
+                <a href="#profil" onclick="loadDoc('profil')" class="navBtn" id="profil">Profil</a>
             </div>
         </header>
 
-        <div id="content">
+        <div id="content-container">
             <!--Content mittels AJAX reinladen, standardmässig "uebersicht.html" darstellen-->
-            Vorher
         </div>
 
         <footer>
-            <!--TODO Link auf das Impressum implementieren-->
+            <a href="#impressum" onclick="loadDoc('impressum')">Impressum</a>
         </footer>
     </body>
 </html>
