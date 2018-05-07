@@ -18,20 +18,16 @@ function dropdownNav() {
 }
 
 // Aktive Seite hervorheben
-var navContainer = null;
-var navs = null;
 $(document).ready(function() {
   navContainer = document.getElementById("topnav");
-  navs = navContainer.getElementsByClassName("navBtn");
+  var navs = document.getElementsByClassName("navBtn");
 
   // EventListener für jedes Navigationselement hinzufügen
   for (var i = 0; i < navs.length; i++) {
     navs[i].addEventListener("click", function() {
       var current = document.getElementsByClassName("active");
-      if (current.length > 0) {
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active"; 
-      }
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active"; 
     });
   } 
 })

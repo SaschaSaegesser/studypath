@@ -13,6 +13,7 @@
         <script src="js/script.js"></script>
 
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
 
     <body>
@@ -24,7 +25,7 @@
                 <a href="#path" onclick="loadDoc('path')" class="navBtn">Path</a>
                 <a href="#majors" onclick="loadDoc('majors')" class="navBtn">Majors</a>
                 <a href="#einschreibung" onclick="loadDoc('einschreibung')" class="navBtn">Einschreibung</a>
-                <a href="javascript:void(0);" style="font-size:15px" class="icon" onclick="dropdownNav()">&#9776;</a>
+                <a href="javascript:void(0);" class="icon" onclick="dropdownNav()">&#9776;</a>
 
                 <a href="#profil" onclick="loadDoc('profil')" class="navBtn" id="profil">Profil</a>
             </div>
@@ -34,8 +35,8 @@
             <!--Content mittels AJAX reinladen, standardmässig "uebersicht.html" darstellen-->
         </div>
 
-        <footer>
-            <a href="#impressum" onclick="loadDoc('impressum')">Impressum</a>
+        <footer id="footer">
+            <a href="#impressum" id="impressum" onclick="loadDoc('impressum')">Impressum</a>
         </footer>
     </body>
 </html>
