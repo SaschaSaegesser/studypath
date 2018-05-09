@@ -1,0 +1,40 @@
+/* Smartphone */
+.path-card {
+  text-align: center;
+}
+
+.path-semester-content {
+  display: none;
+}
+
+.path-show {
+  display: block;
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1279px) {
+    #path-list {
+    overflow: hidden;
+  }
+  
+  #path-list li {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  #path-list {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #path-list li {
+    display: inline-table;
+  }
+
+  .path-semester-content {
+    display: block;
+  }
+}

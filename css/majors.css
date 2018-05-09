@@ -1,0 +1,25 @@
+/* Smartphone */
+  #major-list {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #major-list li {
+    display: inline-table;
+  }
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1279px) {
+  #major-state-list li {
+    display: block;
+    width: 100;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  #major-state-list li {
+    display: inline-table;
+    width: 33%;
+  }
+}

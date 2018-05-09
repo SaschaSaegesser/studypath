@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  loadDoc('uebersicht');
+  loadDoc('majors');
 })
 
 // Content mittels AJAX reinladen
@@ -31,3 +31,13 @@ $(document).ready(function() {
     });
   } 
 })
+
+// Path-Dropdowns auf Click
+function pathDropdown(id) {
+  document.getElementById(id).classList.toggle("path-show");
+}
+
+// Modulbeschreibung (Modal) öffnen
+$(".card").on("click", function (e) {
+  $("#modalnew").modal("show");
+});

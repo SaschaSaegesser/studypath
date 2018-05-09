@@ -33,7 +33,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   font-family: 'Open Sans', sans-serif;
-  background-color: #efefef;
+  background-color: #eeeeee;
 }
 
 ol, ul {
@@ -92,6 +92,19 @@ h1 {
   padding: 0;
 }
 
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 8px;
+}
+
 #logo {
   margin-right: 64px;
   padding: 13px 10px 9px 12px;
@@ -126,7 +139,6 @@ h1 {
 
 footer {
   margin-top: 8px;
-  overflow: hidden;
   background-color: #ffb300;
   height: 50px;
   display: flex;
@@ -154,8 +166,20 @@ footer a:hover {
 }
 
 img {
-  width: 75%;
+  width: 50%;
 }
+
+.float-left {
+  float: left;
+}
+
+dialog {  
+    width: 500px;  
+    background:#e8e8e8;
+    border: 1px solid #dadada;
+    font-family:sans-serif;
+    padding: 5px 10px 20px 20px;
+}  
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -186,5 +210,9 @@ img {
 
   #profil {
     float: right;
+  }
+
+  .margin-left-12-5 {
+    margin-left: 12.5%;
   }
 }

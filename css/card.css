@@ -10,6 +10,29 @@
   cursor: pointer;
 }
 
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25), 0 2px 4px rgba(0, 0, 0, .22);
+}
+
+.card p {
+  font-size: 14px;
+  line-height: normal;
+}
+
+.card-static {
+  margin: 10px;
+  padding: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  background-color: #fafafa;
+  text-align: left;
+}
+
+.card-static p {
+  font-size: 14px;
+  line-height: normal;
+}
+
 .k { /* Kernmodul */
   border: solid 2px red;
 }
@@ -22,61 +45,12 @@
   border: solid 2px blue;
 }
 
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .25), 0 2px 4px rgba(0, 0, 0, .22);
-}
-
-.card h2 {
-  font-size: 16px;
-  font-weight: bold;
-  padding-bottom: 8px;
-  width: 100%;
-}
-
-.card p {
-  font-size: 14px;
-  line-height: normal;
-}
-
-.card-static {
-  margin: 6px;
-  padding: 12px;
-  box-sizing: border-box;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
-  background-color: white;
-  text-align: left;
-}
-
-.card-static h2 {
-  font-size: 16px;
-  font-weight: bold;
-  padding-bottom: 8px;
-  width: 100%;
-}
-
-.card-static p {
-  font-size: 14px;
-  line-height: normal;
-}
-
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
-  .card {
-    width: 50%;
-  }
-
-  .card-static {
-    width: 50%;
-  }
+  
 }
 
 /* Desktop */
 @media (min-width: 1280px) {
-  .card {
-    width: 25%;
-  }
-
-  .card-static {
-    width: 25%;
-  }
+  
 }

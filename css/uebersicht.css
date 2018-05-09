@@ -4,26 +4,35 @@
 }
 
 .uebersicht-card img {
-  margin: 12px;;
-}
-
-.uebersicht-card h2 {
-  font-size: 20px;
+  margin: 12px;
 }
 
 .uebersicht-card p {
   text-align: left;
+  margin-left: 25%;
 }
 
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
+  #uebersicht-list {
+    display: inline-block;
+  }
 
+  #uebersicht-list li {
+    float: left;
+    width: 33.33%;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1280px) {
+  #uebersicht-list {
+    display: inline-table;
+  }
+
   #uebersicht-list li {
-    display: inline !important;
+    float: left;
+    width: 33.33%;
   }
 }
