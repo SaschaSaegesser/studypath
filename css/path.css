@@ -1,6 +1,17 @@
 /* Smartphone */
 .path-card {
+  margin: 6px;
+  padding: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  background-color: white;
+  text-align: left;
+  cursor: pointer;
   text-align: center;
+}
+
+.path-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25), 0 2px 4px rgba(0, 0, 0, .22);
 }
 
 .path-semester-content {
@@ -13,10 +24,10 @@
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
-    #path-list {
+  #path-list {
     overflow: hidden;
   }
-  
+
   #path-list li {
     width: 50%;
     float: left;
@@ -25,6 +36,14 @@
 
 /* Desktop */
 @media (min-width: 1280px) {
+  .path-card {
+    cursor: default;
+  }
+  
+  .path-card:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  }
+
   #path-list {
     overflow-x: auto;
     white-space: nowrap;

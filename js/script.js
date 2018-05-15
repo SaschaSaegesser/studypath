@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  loadDoc('majors');
-})
+  loadDoc('uebersicht');
+});
 
 // Content mittels AJAX reinladen
 function loadDoc(fileName) {
@@ -19,15 +19,22 @@ function dropdownNav() {
 
 // Aktive Seite hervorheben
 $(document).ready(function() {
+  var i;
+  var navContainer;
+  var navs;
+  var current;
+
   navContainer = document.getElementById("topnav");
-  var navs = document.getElementsByClassName("navBtn");
+  navs = document.getElementsByClassName("navBtn");
 
   // EventListener für jedes Navigationselement hinzufügen
-  for (var i = 0; i < navs.length; i++) {
+  for (i = 0; i < navs.length; i++) {
     navs[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("active");
+      current = document.getElementsByClassName("active");
       current[0].className = current[0].className.replace(" active", "");
       this.className += " active"; 
+      
+      dropdownNav();
     });
   } 
 })
@@ -41,3 +48,8 @@ function pathDropdown(id) {
 $(".card").on("click", function (e) {
   $("#modalnew").modal("show");
 });
+
+// Nav schliessen
+$(window).on('click', function() {
+  
+})

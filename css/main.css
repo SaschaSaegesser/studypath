@@ -58,7 +58,7 @@ table {
 /* Smartphones */
 .nav {
   overflow: hidden;
-  background-color: #ffb300;
+  background-color: #f9a825;
   margin-bottom: 8px;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
 }
@@ -74,13 +74,14 @@ table {
 }
 
 .nav a:hover {
-  background-color: #ffe54c;
+  background-color: #fbc02d;
   color: #616161;
 }
 
 .active {
-  background-color: #c68400;
-  color: white;
+  color: black !important;
+  border-left: 3px solid black;
+  padding-left: 12px !important;
 }
 
 .nav a:not(:first-child) {
@@ -112,7 +113,7 @@ h3 {
 }
 
 #logo:hover {
-  background-color: #ffb300;
+  background-color: #f9a825;
   color: #616161;
 }
 
@@ -140,25 +141,25 @@ h3 {
 footer {
   margin-top: 8px;
   background-color: #ffb300;
-  height: 50px;
   display: flex;
   align-items: center;
   text-align: center;
-  width: 100%;
   position: relative;
   padding: 0;
   box-shadow: 8px 0 0 0 rgba(0,0,0,0.4);
 }
 
-footer a {
+footer ul{
   width: 100%;
-  font-size: 14px;
-  color: white;
-  text-decoration: none;
+  padding: 8px;
+  line-height: normal;
 }
 
-footer a:hover {
-  color: #616161;
+footer p {
+  width: 100%;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
 }
 
 #content-container {
@@ -174,11 +175,11 @@ img {
 }
 
 dialog {  
-    width: 500px;  
-    background:#e8e8e8;
-    border: 1px solid #dadada;
-    font-family:sans-serif;
-    padding: 5px 10px 20px 20px;
+  width: 500px;  
+  background:#e8e8e8;
+  border: 1px solid #dadada;
+  font-family:sans-serif;
+  padding: 5px 10px 20px 20px;
 }  
 
 /* Tablets */
@@ -193,7 +194,25 @@ dialog {
   }
 
   .nav a:not(:first-child) {
+    display: block !important;
+  }
+
+  .nav a {
+    float: left;
+  }
+
+  .nav.responsive:not(:first-child) {
     display: block;
+  }
+
+  .nav.responsive .icon {
+    display: none !impotant;
+  }
+
+  .nav.responsive a {
+    float: left;
+    display: block;
+    text-align: left;
   }
 
   .nav a {
@@ -205,7 +224,7 @@ dialog {
   }
 
   .nav a.icon {
-    display: none;
+    display: none !important;
   }
 
   #profil {
@@ -214,5 +233,13 @@ dialog {
 
   .margin-left-12-5 {
     margin-left: 12.5%;
+  }
+
+  .active {
+    color: black !important;
+    border-left: none;
+    border-bottom: 3px solid black;
+    padding-left: 15px !important;
+    padding-bottom: 11px !important;
   }
 }

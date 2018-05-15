@@ -3,7 +3,6 @@
 .card {
   margin: 6px;
   padding: 12px;
-  box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   background-color: white;
   text-align: left;
@@ -20,9 +19,8 @@
 }
 
 .card-static {
-  margin: 10px;
+  margin: 6px;
   padding: 12px;
-  box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   background-color: #fafafa;
   text-align: left;

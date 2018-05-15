@@ -1,0 +1,30 @@
+/* Smartphone */
+table.profile-table {
+  table-layout: auto;
+  width: 100%;
+}
+
+table.profile-table tr, td {
+  padding: 10px;
+}
+
+table.profile-table tr:not(:last-child) {
+  border-bottom: 1px;
+  border-bottom-style: ridge;
+}
+
+table.profile-table p {
+}
+
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .card-profile {
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .card-profile {
+  }
+}
