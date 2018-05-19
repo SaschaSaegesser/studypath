@@ -24,13 +24,27 @@
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
+  .path-card {
+    cursor: default;
+  }
+  
+  .path-card:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  }
+
   #path-list {
-    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
   #path-list li {
-    width: 50%;
+    display: inline-table;
     float: left;
+    width: 50%
+  }
+
+  .path-semester-content {
+    display: block;
   }
 }
 

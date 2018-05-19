@@ -32,15 +32,15 @@
 }
 
 .k { /* Kernmodul */
-  border: solid 2px red;
+  border: solid 1px red;
 }
 
 .e { /* Erweiterungsmodul */
-  border: solid 2px green;
+  border: solid 1px green;
 }
 
 .z { /* Zusatzmodul */
-  border: solid 2px blue;
+  border: solid 1px blue;
 }
 
 /* Tablets */

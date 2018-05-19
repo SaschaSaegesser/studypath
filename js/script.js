@@ -24,7 +24,6 @@ $(document).ready(function() {
   var navs;
   var current;
 
-  navContainer = document.getElementById("topnav");
   navs = document.getElementsByClassName("navBtn");
 
   // EventListener für jedes Navigationselement hinzufügen
@@ -33,7 +32,7 @@ $(document).ready(function() {
       current = document.getElementsByClassName("active");
       current[0].className = current[0].className.replace(" active", "");
       this.className += " active"; 
-      
+
       dropdownNav();
     });
   } 
@@ -44,12 +43,32 @@ function pathDropdown(id) {
   document.getElementById(id).classList.toggle("path-show");
 }
 
-// Modulbeschreibung (Modal) öffnen
-$(".card").on("click", function (e) {
-  $("#modalnew").modal("show");
-});
 
-// Nav schliessen
-$(window).on('click', function() {
-  
+// Modal öffnen wenn auf eine card geklickt wird
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('card') ) {
+        document.getElementById('myModal').style.display = "block";
+    }
+}, false);
+
+// When the user clicks on the button, open the modal 
+$(document).ready(function(){
+  document.getElementById("myBtn").onclick = function() {
+    document.getElementById('myModal').style.display = "block";
+  }
 })
+
+// When the user clicks on the close button, close the modal 
+$(document).ready(function(){
+  document.getElementsByClassName("close")[0].onclick = function() {
+    document.getElementById('myModal').style.display = "none";
+  }
+})
+
+
+// When the user clicks anywhere outside of the modal, close it
+//window.onclick = function(event) {
+  //if (event.target == document.getElementById('myModal')) {
+    //document.getElementById('myModal').style.display = //"none";
+  //}
+//}
