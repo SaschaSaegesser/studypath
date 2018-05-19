@@ -33,7 +33,17 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   font-family: 'Open Sans', sans-serif;
-  background-color: #eeeeee;
+  background-color: #e0e0e0;
+}
+
+hr {
+  border: 0.25px solid black;
+}
+
+.info {
+  display: block;
+  text-align: center;
+  margin-top: 4px;
 }
 
 ol, ul {
@@ -58,7 +68,7 @@ table {
 /* Smartphones */
 .nav {
   overflow: hidden;
-  background-color: #f9a825;
+  background-color: #ff8f00;
   margin-bottom: 8px;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
 }
@@ -66,7 +76,7 @@ table {
 .nav a {
   float: left;
   display: block;
-  color: white;
+  color: black  ;
   padding: 14px 16px;
   margin: 0;
   text-decoration: none;
@@ -75,12 +85,11 @@ table {
 
 .nav a:hover {
   background-color: #fbc02d;
-  color: #616161;
 }
 
 .active {
-  color: black !important;
-  border-left: 3px solid black;
+  color: white !important;
+  border-left: 3px solid white;
   padding-left: 12px !important;
 }
 
@@ -107,17 +116,18 @@ h3 {
 }
 
 #logo {
+  color: white;
   margin-right: 64px;
   padding: 13px 10px 9px 12px;
   font-size: 21.5px;
 }
 
 #logo:hover {
-  background-color: #f9a825;
-  color: #616161;
+  background-color: #ff8f00;
 }
 
 .nav a.icon {
+  color: white;
   float: right;
   display: block;
 }
@@ -140,7 +150,7 @@ h3 {
 
 footer {
   margin-top: 8px;
-  background-color: #ffb300;
+  background-color: #ff8f00;
   display: flex;
   align-items: center;
   text-align: center;
@@ -184,7 +194,59 @@ dialog {
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
+  .nav {
+    overflow: hidden;
+  }
 
+  .nav a:not(:first-child) {
+    display: block !important;
+  }
+
+  .nav a {
+    float: left;
+  }
+
+  .nav.responsive:not(:first-child) {
+    display: block;
+  }
+
+  .nav.responsive .icon {
+    display: none !impotant;
+  }
+
+  .nav.responsive a {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+
+  .nav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .nav a.icon {
+    display: none !important;
+  }
+
+  #profil {
+    float: right;
+  }
+
+  .margin-left-12-5 {
+    margin-left: 12.5%;
+  }
+
+  .active {
+    color: white !important;
+    border-left: none;
+    border-bottom: 3px solid white;
+    padding-left: 15px !important;
+    padding-bottom: 11px !important;
+  }
 }
 
 /* Desktop */
@@ -236,9 +298,9 @@ dialog {
   }
 
   .active {
-    color: black !important;
+    color: white !important;
     border-left: none;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid white;
     padding-left: 15px !important;
     padding-bottom: 11px !important;
   }

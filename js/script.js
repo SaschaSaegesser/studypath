@@ -40,16 +40,23 @@ $(document).ready(function() {
 
 // Path-Dropdowns auf Click
 function pathDropdown(id) {
-  document.getElementById(id).classList.toggle("path-show");
+  var x = event.clientX, y = event.clientY,
+      elementMouseIsOver = document.elementFromPoint(x, y);
+  if (!elementMouseIsOver.classList.contains("card")) {
+    if (!document.getElementById(id).classList.contains("path-show")) {
+      document.getElementById(id).classList.add("path-show");
+    } else {
+      document.getElementById(id).classList.remove("path-show");
+    }
+  }
 }
 
 
 // Modal öffnen wenn auf eine card geklickt wird
-document.addEventListener('click', function (event) {
-    if (event.target.classList.contains('card') ) {
-        document.getElementById('myModal').style.display = "block";
-    }
-}, false);
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
 
 // When the user clicks on the button, open the modal 
 $(document).ready(function(){
@@ -58,17 +65,9 @@ $(document).ready(function(){
   }
 })
 
-// When the user clicks on the close button, close the modal 
-$(document).ready(function(){
-  document.getElementsByClassName("close")[0].onclick = function() {
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == document.getElementById('myModal')) {
     document.getElementById('myModal').style.display = "none";
   }
-})
-
-
-// When the user clicks anywhere outside of the modal, close it
-//window.onclick = function(event) {
-  //if (event.target == document.getElementById('myModal')) {
-    //document.getElementById('myModal').style.display = //"none";
-  //}
-//}
+}
