@@ -39,3 +39,17 @@
   from {opacity: 0}
   to {opacity: 1}
 }
+
+table.modal-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+table.modal-table tr, td {
+  padding: 10px;
+}
+
+table.modal-table tr:not(:last-child) {
+  border-bottom: 1.5px;
+  border-bottom-style: ridge;
+}

@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <ul id="uebersicht-list">
-      <li>
-        <div class="card-static">
-          <div class="uebersicht-card">
-            <h2>Kernmodule</h2>
-            <hr>
-            <img src="assets/Kernmodule.PNG">
-            <p>Erfolgreich besucht: 12 ETCS</p>
-            <p>Aktiv: 6 ETCS</p>
-            <p>Noch offen: 18 ETCS</p>
-            <hr>
-            <p>Total: 36 ETCS</p>
+    <div class="card-static" id="uebersicht-title">
+      <h2 class="info">Übersicht</h2>
+      <p class="path-info info">Zum Anschauen auf einen Modultyp klicken.</p>
+      <hr class="info">
+      <ul id="uebersicht-list">
+        <li>
+          <div class="card k" style="padding: 0">
+            <div class="uebersicht-card-header" onclick="uebersichtDropdown('kern')">
+              <h2>Kernmodule</h2>
+            </div>
+            <div id="kern" class="uebersicht-card">
+              <hr>
+              <img src="assets/Kernmodule.PNG">
+              <p>Erfolgreich besucht: 12 ETCS</p>
+              <p>Aktiv: 6 ETCS</p>
+              <p>Noch offen: 18 ETCS</p>
+              <hr>
+              <p>Total: 36 ETCS</p>
+            </div>
           </div>
-        </div>
-      </li>
+        </li>
 
-      <li>
-        <div class="card-static">
-          <div class="uebersicht-card">
-            <h2>Erweiterungsmodule</h2>
-            <hr>
-            <img src="assets/Kernmodule.PNG">
-            <p class="margin-left-12-5">Erfolgreich besucht: 12 ETCS</p>
-            <p class="margin-left-12-5">Aktiv: 6 ETCS</p>
-            <p class="margin-left-12-5">Noch offen: 18 ETCS</p>
-            <hr>
-            <p class="margin-left-12-5">Total: 36 ETCS</p>
+        <li>
+          <div class="card e" style="padding: 0">
+            <div class="uebersicht-card-header" onclick="uebersichtDropdown('erweiterung')">
+              <h2>Erweiterungsmodule</h2>
+            </div>
+            <div class="uebersicht-card" id="erweiterung">
+              <hr>
+              <img src="assets/Kernmodule.PNG">
+              <p class="margin-left-12-5">Erfolgreich besucht: 12 ETCS</p>
+              <p class="margin-left-12-5">Aktiv: 6 ETCS</p>
+              <p class="margin-left-12-5">Noch offen: 18 ETCS</p>
+              <hr>
+              <p class="margin-left-12-5">Total: 36 ETCS</p>
+            </div>
           </div>
-        </div>
-      </li>
+        </li>
 
-      <li>
-        <div class="card-static">
-          <div class="uebersicht-card">
-            <h2>Zusatzmodule</h2>
-            <hr>
-            <img src="assets/Kernmodule.PNG">
-            <p class="margin-left-12-5">Erfolgreich besucht: 12 ETCS</p>
-            <p class="margin-left-12-5">Aktiv: 6 ETCS</p>
-            <p class="margin-left-12-5">Noch offen: 18 ETCS</p>
-            <hr>
-            <p class="margin-left-12-5">Total: 36 ETCS</p>
+        <li>
+          <div class="card z" style="padding: 0">
+            <div class="uebersicht-card-header" onclick="uebersichtDropdown('zusatz')">
+              <h2>Zusatzmodule</h2>
+            </div>
+            <div class="uebersicht-card" id="zusatz">
+              <hr>
+              <img src="assets/Kernmodule.PNG">
+              <p class="margin-left-12-5">Erfolgreich besucht: 12 ETCS</p>
+              <p class="margin-left-12-5">Aktiv: 6 ETCS</p>
+              <p class="margin-left-12-5">Noch offen: 18 ETCS</p>
+              <hr>
+              <p class="margin-left-12-5">Total: 36 ETCS</p>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
 
-    <div class="card" onclick="openModal()">
+    <div class="card">
       <p>Kalender</p>
     </div>
+
   </body>
 </html>

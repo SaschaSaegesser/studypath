@@ -1,6 +1,12 @@
 /* Smartphone */
 .uebersicht-card {
   text-align: center;
+  display: none;
+  padding: 0 12px 12px 12px;;
+}
+
+.show {
+  display: block;
 }
 
 .uebersicht-card img {
@@ -12,6 +18,9 @@
   margin-left: 25%;
 }
 
+.uebersicht-card-header {
+  padding:12px;
+}
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -23,10 +32,15 @@
     float: left;
     width: 33.333%;
   }
+
+  .uebersicht-card {
+    text-align: center;
+    display: block;
+  }
 }
 
 /* Desktop */
-@media (min-width: 1280px) {
+@media (min-width: 1280px) {  
   #uebersicht-list {
     display: inline-table;
   }
@@ -34,5 +48,10 @@
   #uebersicht-list li {
     float: left;
     width: 33.333%;
+  }
+
+  .uebersicht-card {
+    text-align: center;
+    display: block;
   }
 }

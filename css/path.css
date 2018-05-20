@@ -1,7 +1,6 @@
 /* Smartphone */
 .path-card {
   margin: 6px;
-  padding: 12px;
   box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   background-color: white;
@@ -14,8 +13,13 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, .25), 0 2px 4px rgba(0, 0, 0, .22);
 }
 
+.path-semester-header {
+  padding: 12px;
+}
+
 .path-semester-content {
   display: none;
+  padding: 0 12px 12px 12px;
 }
 
 .path-show {
@@ -28,6 +32,10 @@
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
+  .path-semester-header {
+    padding: 12px 12px 4px 12px;
+  }
+
   .path-card {
     cursor: default;
   }
@@ -58,6 +66,10 @@
 
 /* Desktop */
 @media (min-width: 1280px) {
+  .path-semester-header {
+    padding: 12px 12px 4px 12px;
+  }
+
   .path-card {
     cursor: default;
   }
@@ -77,6 +89,7 @@
 
   .path-semester-content {
     display: block;
+    padding: 0 12px 12px 12px;
   }
 
   .path-info {

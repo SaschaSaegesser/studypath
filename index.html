@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/path.css">
     <link rel="stylesheet" type="text/css" href="css/majors.css">
     <link rel="stylesheet" type="text/css" href="css/profil.css">
+    <link rel="stylesheet" type="text/css" href="css/faq.css">
     <link rel="stylesheet" type="text/css" href="css/modal.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
@@ -28,12 +29,12 @@
         <h1><a href="#uebersicht" id="logo" onclick="loadDoc('uebersicht')">StudyPath</a></h1>
 
         <a href="#uebersicht" onclick="loadDoc('uebersicht')" onclick="loadDoc('uebersicht')" class="navBtn active">Übersicht</a>
-        <a href="#path" onclick="loadDoc('path')" class="navBtn">Path</a>
+        <a href="#path" onclick="loadDoc('path')" class="navBtn">Bisherige Semester</a>
         <a href="#majors" onclick="loadDoc('majors')" class="navBtn">Majors</a>
         <a href="#einschreibung" onclick="loadDoc('einschreibung')" class="navBtn">Einschreibung</a>
         <a href="javascript:void(0);" class="icon" onclick="dropdownNav()">&#9776;</a>
-
-        <a href="#profil" onclick="loadDoc('profil')" class="navBtn" id="profil">Profil</a>
+        <a href="#profil" onclick="loadDoc('profil')" class="navBtn">Profil</a>
+        <a href="#faq" onclick="loadDoc('faq')" class="navBtn" id="faq">FAQ</a>
       </div>
     </header>
 
@@ -41,31 +42,67 @@
       <!--Content mittels AJAX reinladen, standardmässig "uebersicht.html" darstellen-->
     </div>
 
-    <button id="myBtn">Open Modal</button>
+    <!--Detaillierte Modulbeschreibung in Form eines Modals-->
     <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
           <h2>User Centered Design Engineering</h2>
         </div>
         <div class="modal-body">
-          <h3>Wo / Wann?</h3>
-          <p>Nummer: I.BA_UCDE.F1801</p>
-          <p>Ort: Rotkreuz</p>
-          <p>Raum: 41.203</p>
-          <p>Zeit: 15:40 - 18:00 Uhr</p>
-          <p>Datum: 19.02.2018 - 28.05.2018</p>
-          <hr>
-          <h3>Allgemeine Informationen</h3>
-          <p>Leitung: Dr. Victor Zwimpfer</p>
-          <p>Max. Anzahl Teilnehmende: 26</p>
-          <p>Veranstalter: Informatik</p>
-          <p>ETCS-Punkte: 3</p>
-          <p>Niveau: Intermediate Level</p>
-          <p>Unterrichtssprache(n): Deutsch</p>
-          <hr>
-          <h3>Detaillierte Modulbeschreibung</h3>
-          <p><a href="https://mycampus.hslu.ch/-/media/campus/common/files/dokumente/i/studium/modulbeschriebe-informatik/c16/i-user-centered-design-engineering-2018-01-05.pdf?la=de-ch">Hier klicken (Download als PDF)</a></p>
-          <hr>
+          <div class="card-static">
+            <h2>Wo / Wann?</h2>
+            <hr>
+            <table class="modal-table">
+              <tr>
+                <td><p>Nummer:</p></td>
+                <td><p>I.BA_UCDE.F1801</p></td>
+              </tr>
+              <tr>
+                <td><p>Ort:</p></td>
+                <td><p>Rotkreuz</p></td>
+              </tr>
+              <tr>
+                <td><p>Raum:</p></td>
+                <td><p>41.203</p></td>
+              </tr>
+              <tr>
+                <td><p>Zeit:</p></td>
+                <td><p>15:40 - 18:00 Uhr</p></td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="card-static">
+            <h2>Allgemeine Informationen</h2>
+            <hr>
+            <table class="modal-table">
+              <tr>
+                <td><p>Leitung:</p></td>
+                <td><p>Dr. Victor Zwimpfer</p></td>
+              </tr>
+              <tr>
+                <td><p>Max. Anzahl Teilnehmende:</p></td>
+                <td><p>26</p></td>
+              </tr>
+              <tr>
+                <td><p>ETCS-Punkte:</p></td>
+                <td><p>3</p></td>
+              </tr>
+              <tr>
+                <td><p>Niveau:</p></td>
+                <td><p>Intermediate Level</p></td>
+              </tr>
+              <tr>
+                <td><p>Unterrichtssprache(n):</p></td>
+                <td><p>Deutsch</p></td>
+              </tr>
+            </table>
+          </div>
+          <div class="card-static">
+            <h2>Detaillierte Modulbeschreibung</h2>
+            <hr>
+            <p><a href="https://mycampus.hslu.ch/-/media/campus/common/files/dokumente/i/studium/modulbeschriebe-informatik/c16/i-user-centered-design-engineering-2018-01-05.pdf?la=de-ch">Hier klicken</a> (Download als PDF)</p>
+          </div>
         </div>
       </div>
     </div>

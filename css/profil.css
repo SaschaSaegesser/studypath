@@ -14,7 +14,7 @@ table.profile-table tr, td {
 }
 
 table.profile-table tr:not(:last-child) {
-  border-bottom: 1px;
+  border-bottom: 1.5px;
   border-bottom-style: ridge;
 }
 

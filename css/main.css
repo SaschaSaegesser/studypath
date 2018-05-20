@@ -30,7 +30,13 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
+  height: 100%;
   line-height: 1;
   font-family: 'Open Sans', sans-serif;
   background-color: #e0e0e0;
@@ -48,6 +54,11 @@ hr {
 
 ol, ul {
   list-style: none;
+}
+
+ul.dotted {
+  list-style: initial;
+  padding-left: 24px;
 }
 
 blockquote, q {
@@ -104,7 +115,7 @@ h1 {
 
 h2 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -148,13 +159,19 @@ h3 {
   text-align: left;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 footer {
-  margin-top: 8px;
+  position: relative;
+  margin-top: -60px;
+  height: 60px;
+  clear: both;
   background-color: #ff8f00;
   display: flex;
   align-items: center;
   text-align: center;
-  position: relative;
   padding: 0;
   box-shadow: 8px 0 0 0 rgba(0,0,0,0.4);
 }
@@ -174,6 +191,7 @@ footer p {
 
 #content-container {
   width: 100%;
+  padding-bottom: 64px;
 }
 
 img {
@@ -194,63 +212,78 @@ dialog {
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
+  .info {
+    display: none;
+  }
+
   .nav {
     overflow: hidden;
-  }
-
-  .nav a:not(:first-child) {
-    display: block !important;
-  }
-
-  .nav a {
-    float: left;
-  }
-
-  .nav.responsive:not(:first-child) {
-    display: block;
-  }
-
-  .nav.responsive .icon {
-    display: none !impotant;
-  }
-
-  .nav.responsive a {
-    float: left;
-    display: block;
-    text-align: left;
+    background-color: #ff8f00;
+    margin-bottom: 8px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
   }
 
   .nav a {
     float: left;
-    text-align: center;
+    display: block;
+    color: black  ;
     padding: 14px 16px;
+    margin: 0;
     text-decoration: none;
     font-size: 17px;
   }
 
-  .nav a.icon {
-    display: none !important;
-  }
-
-  #profil {
-    float: right;
-  }
-
-  .margin-left-12-5 {
-    margin-left: 12.5%;
+  .nav a:hover {
+    background-color: #fbc02d;
   }
 
   .active {
     color: white !important;
-    border-left: none;
-    border-bottom: 3px solid white;
-    padding-left: 15px !important;
-    padding-bottom: 11px !important;
+    border-left: 3px solid white;
+    padding-left: 12px !important;
+  }
+
+  .nav a:not(:first-child) {
+    display: none;
+  }
+
+  .nav a.icon {
+    color: white;
+    float: right;
+    display: block;
+  }
+
+  .nav.responsive {
+    position: relative;
+  }
+
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .active {
+    color: white !important;
+    border-left: 3px solid white;
+    border-bottom: none;
+    padding-bottom: 15px !important;
+    padding-left: 11px !important;
   }
 }
 
 /* Desktop */
 @media (min-width: 1280px) {
+  .info {
+    display: none;
+  }
+
   .nav {
     overflow: hidden;
   }
@@ -289,7 +322,7 @@ dialog {
     display: none !important;
   }
 
-  #profil {
+  #faq {
     float: right;
   }
 

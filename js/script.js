@@ -1,14 +1,20 @@
-$(document).ready(function() {
-  loadDoc('uebersicht');
-});
+/*jslint browser: true*/
+/*global $, jQuery, alert*/
 
 // Content mittels AJAX reinladen
 function loadDoc(fileName) {
+  "use strict";
   $("#content-container").load("content/" + fileName + ".html");
 }
 
+$(document).ready(function () {
+  "use strict";
+  loadDoc('faq');
+});
+
 // Navigation for mobile view
 function dropdownNav() {
+  "use strict";
   var x = document.getElementById("topnav");
   if (x.className === "nav") {
     x.className += " responsive";
@@ -18,30 +24,39 @@ function dropdownNav() {
 }
 
 // Aktive Seite hervorheben
-$(document).ready(function() {
-  var i;
-  var navContainer;
-  var navs;
-  var current;
-
+$(document).ready(function () {
+  "use strict";
+  var i, navContainer, navs, current;
   navs = document.getElementsByClassName("navBtn");
-
   // EventListener für jedes Navigationselement hinzufügen
-  for (i = 0; i < navs.length; i++) {
-    navs[i].addEventListener("click", function() {
+  for (i = 0; i < navs.length; i += 1) {
+    navs[i].addEventListener("click", function () {
       current = document.getElementsByClassName("active");
       current[0].className = current[0].className.replace(" active", "");
-      this.className += " active"; 
+      this.className += " active";
 
       dropdownNav();
     });
-  } 
-})
+  }
+});
+
+// Übersicht-Dropdowns auf Click
+function uebersichtDropdown(id) {
+  "use strict";
+  var x = event.clientX, y = event.clientY, elementMouseIsOver = document.elementFromPoint(x, y);
+  if (!elementMouseIsOver.classList.contains("card")) {
+    if (!document.getElementById(id).classList.contains("show")) {
+      document.getElementById(id).classList.add("show");
+    } else {
+      document.getElementById(id).classList.remove("show");
+    }
+  }
+}
 
 // Path-Dropdowns auf Click
 function pathDropdown(id) {
-  var x = event.clientX, y = event.clientY,
-      elementMouseIsOver = document.elementFromPoint(x, y);
+  "use strict";
+  var x = event.clientX, y = event.clientY, elementMouseIsOver = document.elementFromPoint(x, y);
   if (!elementMouseIsOver.classList.contains("card")) {
     if (!document.getElementById(id).classList.contains("path-show")) {
       document.getElementById(id).classList.add("path-show");
@@ -51,23 +66,16 @@ function pathDropdown(id) {
   }
 }
 
-
 // Modal öffnen wenn auf eine card geklickt wird
 function openModal() {
+  "use strict";
   document.getElementById('myModal').style.display = "block";
 }
 
-
-// When the user clicks on the button, open the modal 
-$(document).ready(function(){
-  document.getElementById("myBtn").onclick = function() {
-    document.getElementById('myModal').style.display = "block";
-  }
-})
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == document.getElementById('myModal')) {
+// Modal schliessen wenn ausserhalb des Modals geklickt wird
+window.onclick = function (event) {
+  "use strict";
+  if (event.target === document.getElementById('myModal')) {
     document.getElementById('myModal').style.display = "none";
   }
-}
+};
