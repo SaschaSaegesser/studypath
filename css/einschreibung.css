@@ -1,0 +1,178 @@
+/* Smartphone */
+.empty-card {
+  height: 50px;
+  margin: 6px;
+  padding: 30px 12px 0 12px;
+  box-shadow: inset 0 0 5px black;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.empty-card p {
+  font-size: 14px;
+  line-height: normal;
+}
+
+.einschreibung-card {
+  margin: 6px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  background-color: #f5f5f5;
+  text-align: left;
+}
+
+.einschreibung-card p {
+  font-size: 14px;
+  line-height: normal;
+}
+
+#einschreibung-row1 {
+  position: relative;
+}
+
+#einschreibung-row1 ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+#einschreibung-row1 li {
+  float: left;
+}
+
+#einschreibung-module {
+  width: 35%;
+}
+
+#einschreibung-filter {
+  width: 55%;
+}
+
+#einschreibung-submit {
+  width: 10%;
+}
+
+#einschreibung-submit {
+  width: 10%;
+}
+
+#einschreibung-module-picked {
+  width: 25%;
+}
+
+#einschreibung-calendar {
+  width: 75%;
+}
+
+#einschreibung-row1 .card {
+  height: 50px;
+}
+
+#einschreibung-anz-table {
+  width: 100%;
+  margin: auto;
+}
+
+#einschreibung-anz-table th {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#einschreibung-anz-table th, td {
+  text-align: center;
+}
+
+#einschreibung-anz-table th:not(:last-child) {
+  border-right: 1px ridge black;
+}
+
+#einschreibung-anz-table td:not(:last-child) {
+  border-right: 1px ridge black; 
+}
+
+#einschreibung-filter-table {
+  width: 100%;
+  margin: auto;
+}
+
+#einschreibung-filter-table th {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+#einschreibung-filter-table td {
+  text-align: left;
+}
+
+#einschreibung-filter-table th:not(:last-child) {
+  border-right: 1px ridge black;
+}
+
+#einschreibung-filter-table td:not(:last-child) {
+  border-right: 1px ridge black; 
+}
+
+.selectAnzModule {
+  padding-left: 6px;
+}
+
+#einschreibung-module-list {
+  overflow-x: auto;
+  white-space: nowrap; 
+}
+
+#einschreibung-module-list li {
+  display: inline-table;
+}
+
+#einschreibung-module-list div {
+  float: overflow-x: auto;
+  width: auto !important;
+}
+
+#einschreibung-row1 button {
+  background-color: #ff8f00;
+  width: 100%;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 6px;
+  margin-top: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  text-align: center;
+  cursor: pointer;
+}
+
+#einschreibung-row1 button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25), 0 2px 4px rgba(0, 0, 0, .22);
+}
+
+#einschreibung-row3 {
+  position: relative;
+}
+
+#einschreibung-row3 ul {
+  width: 100%;
+  overflow-y: auto;
+}
+
+#einschreibung-row3 li {
+  float: left;
+  max-height: 768px;
+  overflow-y: scroll;
+}
+
+#einschreibung-kalender {
+  width: 100%;
+  height: auto;
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+
+}

@@ -1,6 +1,228 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <div>Hallo, ich bin die Einschreibung.</div>
+    <div id="einschreibung-row1">
+      <ul>
+        <li id="einschreibung-module">
+          <div class="einschreibung-card">
+            <h2>Anzahl Module</h2>
+            <hr>
+            <form>
+              <table id="einschreibung-anz-table">
+                <tr>
+                  <th><p>Kern</p></th>
+                  <th><p>Erweiterung</p></th>
+                  <th><p>Zusatz</p></th>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>
+                        <p>2 /</p>
+                      </li>
+                      <li>
+                        <div class="selectAnzModule">
+                          <select name="anzKernmodule">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>
+                        <p>3 /</p>
+                      </li>
+                      <li>
+                        <div class="selectAnzModule">
+                          <select name="anzErweiterungsmodule" class="anzModule">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>
+                        <p>1 /</p>
+                      </li>
+                      <li>
+                        <div class="selectAnzModule">
+                          <select name="anzZusatzmodule">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </li>
+        <li id="einschreibung-filter">
+          <div class="einschreibung-card">
+            <h2>Filter</h2>
+            <hr>
+            <table id="einschreibung-filter-table">
+              <tr>
+                <th>Name / Major</th>
+                <th>Modultyp</th>
+                <th>Credits</th>
+              </tr>
+              <tr>
+                <td>
+                  <form><input type="text" name="filter-search" placeholder="Modulname"></form>
+                </td>
+                <td>
+                  <form><input type="checkbox" name="filter-kernmodul" checked>Kernmodule</form>
+                </td>
+                <td>
+                  <form><input type="checkbox" name="filter-etcs-3" checked>3 ETCS</form>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select>
+                    <option value="majorNone">Major wählen..</option>
+                    <option value="major1">Major 1</option>
+                    <option value="major2">Major 2</option>
+                    <option value="major3">Major 3</option>
+                    <option value="major4">Major 4</option>
+                    <option value="major5">Major 5</option>
+                  </select>
+                </td>
+                <td>
+                  <form><input type="checkbox" name="filter-erweiterungsmodul" checked>Erweiterungsmodule</form>
+                </td>
+                <td>
+                  <form><input type="checkbox" name="filter-etcs-6" checked>6 ETCS</form>
+                </td>
+              </tr>
+              <tr>
+                <td>
+
+                </td>
+                <td>
+                  <form><input type="checkbox" name="filter-zusatzmodul" checked>Zusatzmodule</form>
+                </td>
+                <td>
+                  <form><input type="checkbox" name="filter-etcs-andere" checked>Andere</form>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li id="einschreibung-submit">
+          <div class="einschreibung-card">
+            <h2>Absenden</h2>
+            <hr>
+            <p>Bitte kontrollieren sie zuvor ihre gewählten Module.</p>
+            <button type="button">&#10003;</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="einschreibung-row2" class="card-static" >
+      <h2>Module wählen</h2>
+      <hr>
+      <ul id="einschreibung-module-list">
+        <li>
+          <div id="boxA" class="card z" onclick="openModal()" draggable="true">
+            <h3>English for Engineers</h3>
+            <p>3 ETCS</p>
+          </div>
+        </li>   
+        <li>
+          <div class="card k" onclick="openModal()" draggable="true">
+            <h3>Mathematik Grundlagen</h3>
+            <p>6 ETCS</p>
+          </div>
+        </li>
+        <li>
+          <div class="card k" onclick="openModal()" draggable="true">
+            <h3>Objektorientiertes Programmieren</h3>
+            <p>6 ETCS</p>
+          </div>
+        </li> 
+        <li>
+          <div class="card k" onclick="openModal()" draggable="true">
+            <h3>Projekt- und Teamarbeit</h3>
+            <p>6 ETCS</p>
+          </div>
+        </li>
+        <li>
+          <div class="card e" onclick="openModal()" draggable="true">
+            <h3>Web Technologies</h3>
+            <p>3 ETCS</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="einschreibung-row3">
+      <ul>
+        <li id="einschreibung-module-picked">
+          <div class="card-static">
+            <h2>Kernmodule</h2>
+            <hr>
+            <div id="boxB" class="empty-card" ondragenter="return dragEnter(ev)" ondrop="return dragDrop(ev)" ondragover="return dragOver(ev)">
+              <p>Modul-Karte hierhin ziehen</p>
+            </div>
+            <div class="empty-card">
+              <p>Modul-Karte hierhin ziehen</p>
+            </div>
+            <br>
+            <h2>Erweiterungsmodule</h2>
+            <hr>
+            <h3 class="text-centered">1. Priorität</h3>
+            <div class="empty-card">
+              <p>Modul-Karte hierhin ziehen</p>
+            </div>
+            <div class="empty-card">
+              <p>Modul-Karte hierhin ziehen</p>
+            </div>
+            <div class="empty-card">
+              <p>Modul-Karte hierhin ziehen</p>
+            </div>
+            <h3 class="text-centered">2. Priorität</h3>
+            <div class="empty-card">
+              <p>Modul-Karte hierhin ziehen</p>
+            </div>
+            <br>
+            <h2>Zusatzmodule</h2>
+            <hr>
+            <h3 class="text-centered">1. Priorität</h3>
+            <div class="empty-card">
+              <p>Modul-Karte hierhin ziehen</p>
+            </div>
+            <h3 class="text-centered">2. Priorität</h3>
+            <div class="empty-card">
+              <p>Modul-Karte hierhin ziehen</p>
+            </div>
+          </div>
+        </li>
+        <li id="einschreibung-calendar">
+          <div class="card-static">
+            <img id="einschreibung-kalender" src=/assets/kalender.PNG>
+          </div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
