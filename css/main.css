@@ -80,13 +80,10 @@ table {
 .nav {
   width: 100%;
   overflow: hidden;
-<<<<<<< HEAD
   background-color: #ff8f00;
   margin: auto;
-=======
-  background-color: #e62e00;
+  background-color: #ff7043;
   margin-bottom: 8px;
->>>>>>> 50c67ae61ef46921abd50209c66c2853def09da9
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
 }
 
@@ -235,7 +232,7 @@ dialog {
 
   .nav {
     overflow: hidden;
-    background-color: #e62e00;
+    background-color: #9099 f4;
     margin-bottom: 8px;
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
   }
