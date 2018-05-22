@@ -79,7 +79,7 @@ table {
 /* Smartphones */
 .nav {
   overflow: hidden;
-  background-color: #ff8f00;
+  background-color: #e62e00;
   margin-bottom: 8px;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
 }
@@ -134,7 +134,7 @@ h3 {
 }
 
 #logo:hover {
-  background-color: #ff8f00;
+  background-color: #e62e00;
 }
 
 .nav a.icon {
@@ -168,7 +168,7 @@ footer {
   margin-top: -60px;
   height: 60px;
   clear: both;
-  background-color: #ff8f00;
+  background-color: #e62e00;
   display: flex;
   align-items: center;
   text-align: center;
@@ -218,7 +218,7 @@ dialog {
 
   .nav {
     overflow: hidden;
-    background-color: #ff8f00;
+    background-color: #e62e00;
     margin-bottom: 8px;
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
   }
