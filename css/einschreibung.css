@@ -40,7 +40,7 @@
 }
 
 #einschreibung-module {
-  width: 35%;
+  width: 30%;
 }
 
 #einschreibung-filter {
@@ -48,11 +48,7 @@
 }
 
 #einschreibung-submit {
-  width: 10%;
-}
-
-#einschreibung-submit {
-  width: 10%;
+  width: 15%;
 }
 
 #einschreibung-module-picked {
@@ -119,6 +115,7 @@
 #einschreibung-module-list {
   overflow-x: auto;
   white-space: nowrap; 
+  
 }
 
 #einschreibung-module-list li {
@@ -131,7 +128,7 @@
 }
 
 #einschreibung-row1 button {
-  background-color: #ff8f00;
+  background-color: #42a5f5;
   width: 100%;
   color: white;
   border: none;

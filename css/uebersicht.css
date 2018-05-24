@@ -22,6 +22,14 @@
   padding:12px;
 }
 
+#aktuelles-semester ul {
+  display: block;
+}
+
+#aktuelles-semester li {
+  width: 100%;
+}
+
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
   #uebersicht-list {
@@ -36,6 +44,15 @@
   .uebersicht-card {
     text-align: center;
     display: block;
+  }
+
+  #aktuelles-semester ul {
+    display: inline-block;
+  }
+
+  #aktuelles-semester li {
+    float: left;
+    width: 33.33%;
   }
 }
 
@@ -53,5 +70,19 @@
   .uebersicht-card {
     text-align: center;
     display: block;
+  }
+
+  #aktuelles-semester {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #aktuelles-semester ul {
+    display: inline-block;
+  }
+
+  #aktuelles-semester li {
+    float: left;
+    width: 25%;
   }
 }

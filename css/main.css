@@ -80,9 +80,8 @@ table {
 .nav {
   width: 100%;
   overflow: hidden;
-  background-color: #ff8f00;
+  background-color: #42a5f5;
   margin: auto;
-  background-color: #ff7043;
   margin-bottom: 8px;
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
 }
@@ -90,7 +89,8 @@ table {
 .nav a {
   float: left;
   display: block;
-  color: black  ;
+  color: #ededed;
+  font-weight: normal;
   padding: 14px 16px;
   margin: 0;
   text-decoration: none;
@@ -98,7 +98,7 @@ table {
 }
 
 .nav a:hover {
-  background-color: #fbc02d;
+  background-color: #6ec6ff;
 }
 
 .active {
@@ -139,7 +139,7 @@ h3 {
 }
 
 #logo:hover {
-  background-color: #e62e00;
+  background-color: #42a5f5;
 }
 
 .nav a.icon {
@@ -173,7 +173,7 @@ footer {
   margin-top: -60px;
   height: 60px;
   clear: both;
-  background-color: #e62e00;
+  background-color: #42a5f5;
   display: flex;
   align-items: center;
   text-align: center;
@@ -232,7 +232,7 @@ dialog {
 
   .nav {
     overflow: hidden;
-    background-color: #9099 f4;
+    background-color: #42a5f5;
     margin-bottom: 8px;
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
   }
@@ -240,7 +240,7 @@ dialog {
   .nav a {
     float: left;
     display: block;
-    color: black  ;
+    color: black;
     padding: 14px 16px;
     margin: 0;
     text-decoration: none;
@@ -248,7 +248,7 @@ dialog {
   }
 
   .nav a:hover {
-    background-color: #fbc02d;
+    background-color: #6ec6ff;
   }
 
   .active {
@@ -312,6 +312,7 @@ dialog {
 
   .nav a {
     float: left;
+    color: black
   }
 
   .nav.responsive:not(:first-child) {

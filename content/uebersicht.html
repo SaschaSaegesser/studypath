@@ -9,7 +9,7 @@
         <li>
           <div class="card k" style="padding: 0">
             <div class="uebersicht-card-header" onclick="uebersichtDropdown('kern')">
-              <h2>Kernmodule</h2>
+              <h2 class="font-color-k">Kernmodule</h2>
             </div>
             <div id="kern" class="uebersicht-card">
               <hr>
@@ -26,7 +26,7 @@
         <li>
           <div class="card e" style="padding: 0">
             <div class="uebersicht-card-header" onclick="uebersichtDropdown('erweiterung')">
-              <h2>Erweiterungsmodule</h2>
+              <h2 class="font-color-e">Erweiterungsmodule</h2>
             </div>
             <div class="uebersicht-card" id="erweiterung">
               <hr>
@@ -43,7 +43,7 @@
         <li>
           <div class="card z" style="padding: 0">
             <div class="uebersicht-card-header" onclick="uebersichtDropdown('zusatz')">
-              <h2>Zusatzmodule</h2>
+              <h2 class="font-color-z">Zusatzmodule</h2>
             </div>
             <div class="uebersicht-card" id="zusatz">
               <hr>
@@ -60,8 +60,54 @@
     </div>
 
     <div class="card">
-      <p>Kalender</p>
-    </div>
+      <h2>Aktuelles Semester</h2>
+      <hr>
+      <ul id="aktuelles-semester">
+        <li>
+          <div class="card k" onclick="openModal()">
+            <h3>Mathematik Grundlagen</h3>
+            <p>Mo, 09:00 - 11:25 Uhr</p>
+            <p>Di, 09:00 - 11:25 Uhr</p>
+            <p>Rotkreuz, S12.007</p>
+            <p>6 ETCS</p>
+          </div>
 
+        </li>
+        <li>
+          <div class="card z" onclick="openModal()">
+            <h3>English for Engineers</h3>
+            <p>Mo, 13:05 - 15:25 Uhr</p>
+            <p>Rotkreuz, S41.304</p>
+            <p>3 ETCS</p>
+          </div>
+        </li>
+        <li>
+          <div class="card e" onclick="openModal()">
+            <h3>Web Technologies</h3>
+            <p>Di, 13.05 - 15:25 Uhr</p>
+            <p>Horw, E302</p>
+            <p>3 ETCS</p>
+          </div>
+        </li>
+        <li>
+          <div class="card k" onclick="openModal()">
+            <h3>Projekt- und Teamarbeit</h3>
+            <p>Do, 09:00 - 11:25 Uhr</p>
+            <p>Do, 15:40 - 18:00 Uhr</p>
+            <p>Rotkreuz, S41.202 / S41.203</p>
+            <p>6 ETCS</p>
+          </div>
+        </li>
+        <li>
+          <div class="card k" onclick="openModal()">
+            <h3>Objektorientiertes Programmieren</h3>
+            <p>Fr, 09:00 - 11:25 Uhr</p>
+            <p>Sa, 08:30 - 11:00 Uhr</p>
+            <p>Rotkreuz, S12.003</p>
+            <p>6 ETCS</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>

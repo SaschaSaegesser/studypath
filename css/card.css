@@ -32,15 +32,27 @@
 }
 
 .k { /* Kernmodul */
-  border: solid 1.5px #0288d1;
+  border: solid 2.5px #0288d1;
 }
 
 .e { /* Erweiterungsmodul */
-  border: solid 1.5px #388e3c;
+  border: solid 2.5px #388e3c;
 }
 
 .z { /* Zusatzmodul */
-  border: solid 1.5px #fbc02d;
+  border: solid 2.5px #fbc02d;
+}
+
+.font-color-k {
+ color: #0288d1;
+}
+
+.font-color-e {
+ color: #388e3c;
+}
+
+.font-color-z {
+ color: #fbc02d;
 }
 
 /* Tablets */

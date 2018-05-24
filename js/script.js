@@ -9,7 +9,7 @@ function loadDoc(fileName) {
 
 $(document).ready(function () {
   "use strict";
-  loadDoc('einschreibung');
+  loadDoc('uebersicht');
 });
 
 // Navigation for mobile view
@@ -81,26 +81,16 @@ window.onclick = function (event) {
 };
 
 // Drag & Drop-Funktion für die Module der Einschreibung
-function dragStart(ev) {
-  ev.dataTransfer.effectAllowed = 'move';
-  ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
-  ev.dataTransfer.setDragImage(ev.target,0,0);
-  return true;
+function allowDrop(ev) {
+    ev.preventDefault();
 }
 
-function dragEnter(ev) {
-  event.preventDefault();
-  return true;
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
 }
 
-function dragOver(ev) {
-  return false;
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
 }
-
-function dragDrop(ev) {
-  var src = ev.dataTransfer.getData("Text");
-  ev.target.appendChild(document.getElementById(src));
-  ev.stopPropagation();
-  return false;
-}
-

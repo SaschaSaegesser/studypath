@@ -83,6 +83,7 @@
                 <th>Name / Major</th>
                 <th>Modultyp</th>
                 <th>Credits</th>
+                <th>Zeitraum</th>
               </tr>
               <tr>
                 <td>
@@ -93,6 +94,17 @@
                 </td>
                 <td>
                   <form><input type="checkbox" name="filter-etcs-3" checked>3 ETCS</form>
+                </td>
+                <td>
+                  <select>
+                    <option value="alleTage">Alle</option>
+                    <option value="montag">Montag</option>
+                    <option value="dienstag">Dienstag</option>
+                    <option value="mittwoch">Mittwoch</option>
+                    <option value="donnerstag">Donnerstag</option>
+                    <option value="freitag">Freitag</option>
+                    <option value="samstag">Samstag</option>
+                  </select>
                 </td>
               </tr>
               <tr>
@@ -112,6 +124,9 @@
                 <td>
                   <form><input type="checkbox" name="filter-etcs-6" checked>6 ETCS</form>
                 </td>
+                <td>
+                  <form>Von <input type="text" name="filter-von" placeholder="HH:MM"></form>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -122,6 +137,9 @@
                 </td>
                 <td>
                   <form><input type="checkbox" name="filter-etcs-andere" checked>Andere</form>
+                </td>
+                <td>
+                  <form>bis <input type="text" name="filter-bis" placeholder="HH:MM"></form>
                 </td>
               </tr>
             </table>
@@ -143,33 +161,41 @@
       <hr>
       <ul id="einschreibung-module-list">
         <li>
-          <div id="boxA" class="card z" onclick="openModal()" draggable="true">
+          <div id="drag1" class="card z" ondragstart="drag(event)"  onclick="openModal()" draggable="true">
             <h3>English for Engineers</h3>
             <p>3 ETCS</p>
+            <p>Mi, 17:30 - 21:00 Uhr</p>
           </div>
         </li>   
         <li>
-          <div class="card k" onclick="openModal()" draggable="true">
+          <div id="div2" class="card k" onclick="openModal()" ondragstart="drag(event)"  onclick="openModal()" draggable="true">
             <h3>Mathematik Grundlagen</h3>
             <p>6 ETCS</p>
+            <p>Mo, 8:30 - 12:00 Uhr</p>
+            <p>Di, 17:30 - 21:00 Uhr</p>
           </div>
         </li>
         <li>
-          <div class="card k" onclick="openModal()" draggable="true">
+          <div id="div3" class="card k" onclick="openModal()" ondragstart="drag(event)"  onclick="openModal()" draggable="true">
             <h3>Objektorientiertes Programmieren</h3>
             <p>6 ETCS</p>
+            <p>Do, 13:05 - 15:25 Uhr</p>
+            <p>Fr, 15:40 - 18:00 Uhr</p>
           </div>
         </li> 
         <li>
-          <div class="card k" onclick="openModal()" draggable="true">
+          <div id="div4" class="card k" onclick="openModal()" onclick="openModal()" draggable="true">
             <h3>Projekt- und Teamarbeit</h3>
             <p>6 ETCS</p>
+            <p>Mo, 15:40 - 18:00 Uhr</p>
+            <p>Di, 18:30 - 21:00 Uhr</p>
           </div>
         </li>
         <li>
-          <div class="card e" onclick="openModal()" draggable="true">
+          <div id="div5" class="card e" onclick="openModal()" onclick="openModal()" draggable="true">
             <h3>Web Technologies</h3>
             <p>3 ETCS</p>
+            <p>Di, 13:05 - 15:25 Uhr</p>
           </div>
         </li>
       </ul>
@@ -181,7 +207,7 @@
           <div class="card-static">
             <h2>Kernmodule</h2>
             <hr>
-            <div id="boxB" class="empty-card" ondragenter="return dragEnter(ev)" ondrop="return dragDrop(ev)" ondragover="return dragOver(ev)">
+            <div id="div1" class="empty-card" ondragover="allowDrop(event)">
               <p>Modul-Karte hierhin ziehen</p>
             </div>
             <div class="empty-card">
