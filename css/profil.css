@@ -11,6 +11,8 @@ table.profile-table {
 
 table.profile-table tr, td {
   padding: 10px;
+  
+  text-align: left;
 }
 
 table.profile-table tr:not(:last-child) {

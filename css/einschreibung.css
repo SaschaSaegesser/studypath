@@ -77,6 +77,10 @@
   text-align: center;
 }
 
+#einschreibung-anz-table li {
+  width: 25%;
+}
+
 #einschreibung-anz-table th:not(:last-child) {
   border-right: 1px ridge black;
 }
@@ -87,7 +91,6 @@
 
 #einschreibung-filter-table {
   width: 100%;
-  margin: auto;
 }
 
 #einschreibung-filter-table th {
@@ -162,6 +165,15 @@
 #einschreibung-kalender {
   width: 100%;
   height: auto;
+}
+
+.filter-option {
+  display: inline-block;
+  width: auto;
+}
+
+.gap {
+  height: 600px;
 }
 
 /* Tablets */

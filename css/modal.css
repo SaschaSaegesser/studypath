@@ -19,7 +19,7 @@
   left: 50%;
   transform: translate(-50%, -50%) !important;
   background-color: #fefefe;
-  border: 2px solid #ff8f00;
+  border: 2px solid #42a5f5;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   animation-name: animatetop;
   animation-duration: 0.4s
@@ -27,7 +27,7 @@
 
 .modal-header {
   padding: 8px;
-  background-color: #ff8f00;
+  background-color: #42a5f5;
   color: white;
 }
 

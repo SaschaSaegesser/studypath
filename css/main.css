@@ -134,12 +134,17 @@ h3 {
 #logo {
   color: white;
   margin-right: 64px;
-  padding: 13px 10px 9px 12px;
-  font-size: 21.5px;
+  padding: 8px;
+  height: 35px;
 }
 
 #logo:hover {
   background-color: #42a5f5;
+}
+
+#logo img {
+  max-height: 100%;
+  width: auto;
 }
 
 .nav a.icon {

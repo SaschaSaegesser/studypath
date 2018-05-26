@@ -2,110 +2,103 @@
 <html>
   <body>
     <div class="card-static" id="uebersicht-title">
-      <h2 class="info">Übersicht</h2>
+      <h2>Gesamtes Studium (ETCS)</h2>
       <p class="path-info info">Zum Anschauen auf einen Modultyp klicken.</p>
-      <hr class="info">
+      <hr>
       <ul id="uebersicht-list">
         <li>
-          <div class="card k" style="padding: 0">
+          <div class="card k nohover" style="padding: 0">
             <div class="uebersicht-card-header" onclick="uebersichtDropdown('kern')">
               <h2 class="font-color-k">Kernmodule</h2>
             </div>
-            <div id="kern" class="uebersicht-card">
-              <hr>
-              <img src="assets/Kernmodule.PNG">
-              <p>Erfolgreich besucht: 12 ETCS</p>
-              <p>Aktiv: 6 ETCS</p>
-              <p>Noch offen: 18 ETCS</p>
-              <hr>
-              <p>Total: 36 ETCS</p>
+            <div class="uebersicht-card" id="kern">
+              <img class="img-uebersicht" src="assets/Kernmodule.PNG">
             </div>
           </div>
         </li>
 
         <li>
-          <div class="card e" style="padding: 0">
+          <div class="card e nohover" style="padding: 0">
             <div class="uebersicht-card-header" onclick="uebersichtDropdown('erweiterung')">
               <h2 class="font-color-e">Erweiterungsmodule</h2>
             </div>
             <div class="uebersicht-card" id="erweiterung">
-              <hr>
-              <img src="assets/Kernmodule.PNG">
-              <p class="margin-left-12-5">Erfolgreich besucht: 12 ETCS</p>
-              <p class="margin-left-12-5">Aktiv: 6 ETCS</p>
-              <p class="margin-left-12-5">Noch offen: 18 ETCS</p>
-              <hr>
-              <p class="margin-left-12-5">Total: 36 ETCS</p>
+              <img class="img-uebersicht" src="assets/Erweiterungsmodule.PNG">
             </div>
           </div>
         </li>
 
         <li>
-          <div class="card z" style="padding: 0">
+          <div class="card z nohover" style="padding: 0">
             <div class="uebersicht-card-header" onclick="uebersichtDropdown('zusatz')">
               <h2 class="font-color-z">Zusatzmodule</h2>
             </div>
             <div class="uebersicht-card" id="zusatz">
-              <hr>
-              <img src="assets/Kernmodule.PNG">
-              <p class="margin-left-12-5">Erfolgreich besucht: 12 ETCS</p>
-              <p class="margin-left-12-5">Aktiv: 6 ETCS</p>
-              <p class="margin-left-12-5">Noch offen: 18 ETCS</p>
-              <hr>
-              <p class="margin-left-12-5">Total: 36 ETCS</p>
+              <img class="img-uebersicht" src="assets/Zusatzmodule.PNG">
             </div>
           </div>
         </li>
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card-static">
       <h2>Aktuelles Semester</h2>
       <hr>
       <ul id="aktuelles-semester">
         <li>
-          <div class="card k" onclick="openModal()">
-            <h3>Mathematik Grundlagen</h3>
-            <p>Mo, 09:00 - 11:25 Uhr</p>
-            <p>Di, 09:00 - 11:25 Uhr</p>
-            <p>Rotkreuz, S12.007</p>
-            <p>6 ETCS</p>
-          </div>
-
+          <ul class="aktuelle-module">
+            <li>
+              <div class="card k" onclick="openModal()">
+                <h3>Mathematik Grundlagen</h3>
+                <p>Mo, 09:00 - 11:25 Uhr</p>
+                <p>Di, 09:00 - 11:25 Uhr</p>
+                <p>Rotkreuz, S12.007</p>
+                <p>6 ETCS</p>
+              </div>
+            </li>
+            <li>
+              <div class="card k" onclick="openModal()">
+                <h3>Projekt- und Teamarbeit</h3>
+                <p>Do, 09:00 - 11:25 Uhr</p>
+                <p>Do, 15:40 - 18:00 Uhr</p>
+                <p>Rotkreuz, S41.202 / S41.203</p>
+                <p>6 ETCS</p>
+              </div>
+            </li>
+            <li>
+              <div class="card k" onclick="openModal()">
+                <h3>Objektorientiertes Programmieren</h3>
+                <p>Fr, 09:00 - 11:25 Uhr</p>
+                <p>Sa, 08:30 - 11:00 Uhr</p>
+                <p>Rotkreuz, S12.003</p>
+                <p>6 ETCS</p>
+              </div>
+            </li>
+          </ul>
         </li>
         <li>
-          <div class="card z" onclick="openModal()">
-            <h3>English for Engineers</h3>
-            <p>Mo, 13:05 - 15:25 Uhr</p>
-            <p>Rotkreuz, S41.304</p>
-            <p>3 ETCS</p>
-          </div>
+          <ul class="aktuelle-module">
+            <li>
+              <div class="card e" onclick="openModal()">
+                <h3>Web Technologies</h3>
+                <p>Di, 13.05 - 15:25 Uhr</p>
+                <p>Horw, E302</p>
+                <p>3 ETCS</p>
+              </div>
+            </li>
+          </ul>
         </li>
-        <li>
-          <div class="card e" onclick="openModal()">
-            <h3>Web Technologies</h3>
-            <p>Di, 13.05 - 15:25 Uhr</p>
-            <p>Horw, E302</p>
-            <p>3 ETCS</p>
-          </div>
-        </li>
-        <li>
-          <div class="card k" onclick="openModal()">
-            <h3>Projekt- und Teamarbeit</h3>
-            <p>Do, 09:00 - 11:25 Uhr</p>
-            <p>Do, 15:40 - 18:00 Uhr</p>
-            <p>Rotkreuz, S41.202 / S41.203</p>
-            <p>6 ETCS</p>
-          </div>
-        </li>
-        <li>
-          <div class="card k" onclick="openModal()">
-            <h3>Objektorientiertes Programmieren</h3>
-            <p>Fr, 09:00 - 11:25 Uhr</p>
-            <p>Sa, 08:30 - 11:00 Uhr</p>
-            <p>Rotkreuz, S12.003</p>
-            <p>6 ETCS</p>
-          </div>
+        <li>              
+          <ul class="aktuelle-module">
+            <li>
+              <div class="card z" onclick="openModal()">
+                <h3>English for Engineers</h3>
+                <p>Mo, 13:05 - 15:25 Uhr</p>
+                <p>Rotkreuz, S41.304</p>
+                <p>3 ETCS</p>
+              </div>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

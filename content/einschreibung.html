@@ -37,7 +37,7 @@
                   <td>
                     <ul>
                       <li>
-                        <p>3 /</p>
+                        <p>1 /</p>
                       </li>
                       <li>
                         <div class="selectAnzModule">
@@ -90,13 +90,13 @@
                   <form><input type="text" name="filter-search" placeholder="Modulname"></form>
                 </td>
                 <td>
-                  <form><input type="checkbox" name="filter-kernmodul" checked>Kernmodule</form>
+                  <form><input type="checkbox" name="filter-kernmodul" checked>Kern</form>
                 </td>
                 <td>
                   <form><input type="checkbox" name="filter-etcs-3" checked>3 ETCS</form>
                 </td>
                 <td>
-                  <select>
+                  <select class="filter-option">
                     <option value="alleTage">Alle</option>
                     <option value="montag">Montag</option>
                     <option value="dienstag">Dienstag</option>
@@ -109,7 +109,7 @@
               </tr>
               <tr>
                 <td>
-                  <select>
+                  <select class="filter-option">
                     <option value="majorNone">Major wählen..</option>
                     <option value="major1">Major 1</option>
                     <option value="major2">Major 2</option>
@@ -119,13 +119,13 @@
                   </select>
                 </td>
                 <td>
-                  <form><input type="checkbox" name="filter-erweiterungsmodul" checked>Erweiterungsmodule</form>
+                  <form><input type="checkbox" name="filter-erweiterungsmodul" checked>Erweiterung</form>
                 </td>
                 <td>
                   <form><input type="checkbox" name="filter-etcs-6" checked>6 ETCS</form>
                 </td>
                 <td>
-                  <form>Von <input type="text" name="filter-von" placeholder="HH:MM"></form>
+                  <form>Von <input type="text" name="filter-von" placeholder="HH:MM" class="filter-option"></form>
                 </td>
               </tr>
               <tr>
@@ -133,13 +133,13 @@
 
                 </td>
                 <td>
-                  <form><input type="checkbox" name="filter-zusatzmodul" checked>Zusatzmodule</form>
+                  <form><input type="checkbox" name="filter-zusatzmodul" checked>Zusatz</form>
                 </td>
                 <td>
                   <form><input type="checkbox" name="filter-etcs-andere" checked>Andere</form>
                 </td>
                 <td>
-                  <form>bis <input type="text" name="filter-bis" placeholder="HH:MM"></form>
+                  <form>bis <input type="text" name="filter-bis" placeholder="HH:MM" class="filter-option"></form>
                 </td>
               </tr>
             </table>
@@ -158,23 +158,9 @@
 
     <div id="einschreibung-row2" class="card-static" >
       <h2>Module wählen</h2>
+      <p class="text-centered">Module per Drag &amp; Drop wählen</p> 
       <hr>
-      <ul id="einschreibung-module-list">
-        <li>
-          <div id="drag1" class="card z" ondragstart="drag(event)"  onclick="openModal()" draggable="true">
-            <h3>English for Engineers</h3>
-            <p>3 ETCS</p>
-            <p>Mi, 17:30 - 21:00 Uhr</p>
-          </div>
-        </li>   
-        <li>
-          <div id="div2" class="card k" onclick="openModal()" ondragstart="drag(event)"  onclick="openModal()" draggable="true">
-            <h3>Mathematik Grundlagen</h3>
-            <p>6 ETCS</p>
-            <p>Mo, 8:30 - 12:00 Uhr</p>
-            <p>Di, 17:30 - 21:00 Uhr</p>
-          </div>
-        </li>
+      <ul id="einschreibung-module-list">  
         <li>
           <div id="div3" class="card k" onclick="openModal()" ondragstart="drag(event)"  onclick="openModal()" draggable="true">
             <h3>Objektorientiertes Programmieren</h3>
@@ -207,8 +193,11 @@
           <div class="card-static">
             <h2>Kernmodule</h2>
             <hr>
-            <div id="div1" class="empty-card" ondragover="allowDrop(event)">
-              <p>Modul-Karte hierhin ziehen</p>
+            <div id="div2" class="card k" onclick="openModal()" ondragstart="drag(event)"  onclick="openModal()" draggable="true">
+              <h3>Mathematik Grundlagen</h3>
+              <p>6 ETCS</p>
+              <p>Mo, 8:30 - 12:00 Uhr</p>
+              <p>Di, 17:30 - 21:00 Uhr</p>
             </div>
             <div class="empty-card">
               <p>Modul-Karte hierhin ziehen</p>
@@ -217,8 +206,10 @@
             <h2>Erweiterungsmodule</h2>
             <hr>
             <h3 class="text-centered">1. Priorität</h3>
-            <div class="empty-card">
-              <p>Modul-Karte hierhin ziehen</p>
+            <div id="drag1" class="card z" ondragstart="drag(event)"  onclick="openModal()" draggable="true">
+              <h3>English for Engineers</h3>
+              <p>3 ETCS</p>
+              <p>Mi, 17:30 - 21:00 Uhr</p>
             </div>
             <div class="empty-card">
               <p>Modul-Karte hierhin ziehen</p>
@@ -242,9 +233,13 @@
               <p>Modul-Karte hierhin ziehen</p>
             </div>
           </div>
+          <div class="gap"></div>
         </li>
         <li id="einschreibung-calendar">
           <div class="card-static">
+            <h2>Live-Vorschau</h2>
+            <p class="text-centered">Der Kalender zeigt live an, wie Ihr Stundenplan mit den Modulen der 1. Priorität aussieht.</p>
+            <hr>
             <img id="einschreibung-kalender" src=/assets/kalender.PNG>
           </div>
         </li>
