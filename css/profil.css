@@ -2,6 +2,7 @@
 #profile-container {
   width: 100%;
   margin: auto;
+  overflow: hidden;
 }
 
 table.profile-table {

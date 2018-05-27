@@ -9,7 +9,7 @@ function loadDoc(fileName) {
 
 $(document).ready(function () {
   "use strict";
-  loadDoc('uebersicht');
+  loadDoc('einschreibung');
 });
 
 // Navigation for mobile view
@@ -64,6 +64,19 @@ function pathDropdown(id) {
       document.getElementById(id).classList.remove("path-show");
     }
   }
+}
+
+// Aktiven Major hervorheben
+function updateSelectedMajor(index) {
+  "use strict";
+  var majors;
+  majors = document.getElementsByClassName("major-card");
+  for (var i = 0; i < majors.length; i += 1) {
+    if (majors[i].classList.contains("active-major")) {
+      majors[i].classList.remove("active-major")
+    }
+  }
+  majors[index].classList.add("active-major");
 }
 
 // Modal öffnen wenn auf eine card geklickt wird

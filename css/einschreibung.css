@@ -40,23 +40,24 @@
 }
 
 #einschreibung-module {
-  width: 30%;
+  width: 100%;
 }
 
 #einschreibung-filter {
-  width: 55%;
+  width: 100%;
+  overflow-x: auto;
 }
 
 #einschreibung-submit {
-  width: 15%;
+  width: 100%;
 }
 
 #einschreibung-module-picked {
-  width: 25%;
+  width: 100%;
 }
 
 #einschreibung-calendar {
-  width: 75%;
+  width: 100%;
 }
 
 #einschreibung-row1 .card {
@@ -118,7 +119,7 @@
 #einschreibung-module-list {
   overflow-x: auto;
   white-space: nowrap; 
-  
+
 }
 
 #einschreibung-module-list li {
@@ -173,15 +174,59 @@
 }
 
 .gap {
-  height: 600px;
+  height: 300px;
 }
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
+  #einschreibung-module {
+    width: 100%;
+  }
 
+  #einschreibung-filter {
+    width: 100%;
+  }
+
+  #einschreibung-submit {
+    width: 100%;
+  }
+
+  #einschreibung-module-picked {
+    width: 100%;
+  }
+
+  #einschreibung-calendar {
+    width: 100%;
+  }
+
+  .gap {
+    height: 0;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1280px) {
+  #einschreibung-module {
+    width: 30%;
+  }
 
+  #einschreibung-filter {
+    width: 55%;
+  }
+
+  #einschreibung-submit {
+    width: 15%;
+  }
+
+  #einschreibung-module-picked {
+    width: 25%;
+  }
+
+  #einschreibung-calendar {
+    width: 75%;
+  }
+
+  .gap {
+    height: 0;
+  }
 }

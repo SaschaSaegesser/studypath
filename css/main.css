@@ -40,6 +40,7 @@ body {
   line-height: normal;
   font-family: 'Open Sans', sans-serif;
   background-color: #e0e0e0;
+  box-sizing: border-box;
 }
 
 hr {
@@ -229,6 +230,22 @@ dialog {
   text-align: center;
 }
 
+.background-color-green {
+  background-color: #81c784 !important;
+}
+
+.background-color-red {
+  background-color: #e57373 !important;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.mobtab {
+  display: inherit;
+}
+
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1279px) {
   .info {
@@ -299,6 +316,10 @@ dialog {
     padding-bottom: 15px !important;
     padding-left: 11px !important;
   }
+
+  .mobtab {
+    display: inherit;
+  }
 }
 
 /* Desktop */
@@ -364,5 +385,9 @@ dialog {
     border-bottom: 3px solid white;
     padding-left: 15px !important;
     padding-bottom: 11px !important;
+  }
+
+  .mobtab {
+    display: none;
   }
 }
