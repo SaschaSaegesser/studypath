@@ -9,7 +9,7 @@ function loadDoc(fileName) {
 
 $(document).ready(function () {
   "use strict";
-  loadDoc('einschreibung');
+  loadDoc('uebersicht');
 });
 
 // Navigation for mobile view
